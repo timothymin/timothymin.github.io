@@ -10,4 +10,4 @@ paper: /pdfs/3D_Gaussian_Splatting_in_the_Dark.pdf
 course: "3D Computer Vision"
 ---
 
-Course project of 3D Computer Vision at SNU, by prof. Hanbyul Joo. We presented a method to learn robust gaussian splatting to render realistic novel views from dark and blurry scenes. The proposed method initialize gaussians based on dense point tracking method instead of keypoint matching, and utilize the generated depth map for depth regularization.
+Course project of 3D Computer Vision at SNU. We presented a method to learn robust gaussian splatting to render realistic novel views from dark and blurry scenes. The proposed method initialize gaussians based on dense point tracking method instead of keypoint matching, and utilize the generated depth map for depth regularization.
