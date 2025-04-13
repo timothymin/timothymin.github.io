@@ -7,9 +7,7 @@ permalink: /study/what-is-bellman-equation/
 author: "Joonkyu Min"
 ---
 
-
-  
-This is the 1-step transition property of value function.
+Consider the 1-step transition property of value function.
 $$
 \begin{align}
 V^\pi(s)&=\mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V^\pi(s')|s_{0}=s]
