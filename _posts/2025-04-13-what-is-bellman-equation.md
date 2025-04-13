@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What is Bellman equation?"
-date: 2025-04-14
+date: 2025-04-13
 categories: study
 permalink: /study/what-is-bellman-equation/
 author: "Joonkyu Min"
