@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "What is a MDP?"
+date: 2025-04-13
 categories: study
-permalink: /study/
+permalink: /study/what-is-a-mdp/
 author: "Joonkyu Min"
 ---
 
