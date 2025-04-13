@@ -36,11 +36,10 @@ Due to the Markovian property, value function holds a special property (1-step t
 This leads to the famous **Bellman equation**.
 
 $$
-V^\pi(s)=\mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V^\pi(s')|s_{0}=s]
-$$
-
-$$
-Q^\pi(s)=\mathbb{E}_{a'\sim \pi(\cdot|s'), s'\sim p(\cdot|s,a)}[r+\gamma Q^\pi(s',a')|s_{0}=s,a_{0}=a]
+\begin{align}
+V^\pi(s)&=\mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V^\pi(s')|s_{0}=s] \\
+Q^\pi(s)&=\mathbb{E}_{a'\sim \pi(\cdot|s'), s'\sim p(\cdot|s,a)}[r+\gamma Q^\pi(s',a')|s_{0}=s,a_{0}=a]
+\end{align}
 $$
 
 
