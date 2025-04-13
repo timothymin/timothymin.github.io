@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Gaussian Splatting in the dark"
 date:   2023-06-06 23:59:59 +00:00
 image: /images/GS_in_the_dark.png
