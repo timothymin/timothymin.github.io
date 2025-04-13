@@ -2,7 +2,7 @@
 layout: default
 title: "What is a MDP?"
 categories: study
-permalink: /study/
+permalink: /study/what-is-a-mdp/
 ---
 
 MDP is Markov Decision process, which is a sequential decision problem modeling that holds a Markov property.
