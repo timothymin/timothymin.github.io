@@ -10,11 +10,11 @@ author: "Joonkyu Min"
 MDP is Markov Decision process, which is a sequential decision problem modeling that holds a Markov property.
 
 The basic components of MDP is 
-- Set of **states** $S$
-- Set of **actions** $A$
+- **states** $S$
+- **actions** $A$
 - **Transition model** $P(s'|s,a)$
 - **Reward function** $R(s, a, s')$
-- **Discount factor**: $\gamma ∈[0,1)$ gives smaller weights to future rewards
+- **Discount factor**: $\gamma \in[0,1)$ gives smaller weights to future rewards
 
 The states should be fully observable in MDP.
 If the states are not fully observable, it is called POMDP, which can be modified into MDP.
