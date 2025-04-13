@@ -3,7 +3,7 @@ layout: post
 title:  "Gaussian Splatting in the dark"
 date:   2023-06-06 23:59:59 +00:00
 image: /images/GS_in_the_dark.png
-categories: Projects
+categories: project
 author: "Joonkyu Min"
 subtitle: "Efficient learning of Gaussian Splatting in dark, blurry scenes"
 paper: /pdfs/3D_Gaussian_Splatting_in_the_Dark.pdf

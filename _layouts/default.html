@@ -139,7 +139,7 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat != 'research'%}
+          {% if cat == 'project'%}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
@@ -196,8 +196,12 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>All Pages</h2>
               <ul>
-                {% for page in site.pages %}
+                {% for page in site.posts %}
+                {% for cat in post.categories %}
+                {% if cat == 'study'%}
                   <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endif %}
+                {% endfor %}
                 {% endfor %}
               </ul>
             </td>
