@@ -14,7 +14,7 @@ The basic components of MDP is
 - **action**: $A$
 - **transition model**: $P(s'\mid s,a)$
 - **reward**: $r(s, a, s')$
-- **discount factor**: $\gamma \in[0,1)$, it gives smaller weights to future rewards
+- **discount factor**: $\gamma \in[0,1)$ , it gives smaller weights to future rewards
 
 The states should be fully observable in MDP.
 
@@ -23,7 +23,7 @@ The problem setting of which the states are not fully observable is called POMDP
 This problem setting of MDP is the basic assumption in Reinforcement Learning.
 What we want to do in RL is to find the optimal control that maximizes the expected sum of rewards.
 
-In other words, we can define a **policy** $\pi:S\rightarrow \{a\mid a\in A, s\in S\\}$,
+In other words, we can define a **policy** $\pi:S\rightarrow \{a\mid a\in A, s\in S\\}$ ,
 which is a mapping from states to actions, and find the optimal policy function.
 
 That is, in a mathematical formation, we want to maximize the following dicounted utility function objective.

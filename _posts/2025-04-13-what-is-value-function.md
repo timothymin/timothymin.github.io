@@ -15,10 +15,10 @@ $$
 
 Value in MDP is the expected utility of a particular state, following a given policy.
 
-There are two value functions, state value function $V$, and state-action value function $Q$.
+There are two value functions, state value function $V$, and state-action value function $Q$ .
 
 - **State value function**
-State value function is a mapping from state $s$ to the expected return starting from $s$, following $\pi$.
+State value function is a mapping from state $s$ to the expected return starting from $s$, following $\pi$ .
 
 $$
 V^\pi(s)=\mathbb{E}[G_t|s_{t}=s]
@@ -26,7 +26,7 @@ $$
 
 
 - **State action value function**
-Q-function is a state-action value function, which is a mapping from state $s$ and action $a$ to the expected return starting from state $s$ and action $a$, following $\pi$.
+Q-function is a state-action value function, which is a mapping from state $s$ and action $a$ to the expected return starting from state $s$ and action $a$, following $\pi$ .
 
 $$
 Q^\pi(s)=\mathbb{E}[G_t|s_{t}=s,a_{t}=a]
