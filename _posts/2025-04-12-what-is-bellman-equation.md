@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What is Bellman equation?"
-date: 2025-04-13
+date: 2025-04-12
 categories: study
 permalink: /study/what-is-bellman-equation/
 author: "Joonkyu Min"
@@ -30,6 +30,7 @@ $$
 Then, $V^\pi$ is a fixed point of the Bellman equation.
 Also, it can be easily shown that the Bellman operator is $\gamma$-contraction (w.r.t. sup norm),
 theoretical results show that the value function is actually the **unique fixed point of the Bellman equation**.
+
 
 
 - **Bellman optimality equation**
