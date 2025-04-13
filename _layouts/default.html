@@ -11,6 +11,13 @@
 
     gtag('config', 'G-E00L9PT3V9');
   </script>
+
+  <!-- mathjax support -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
   <title>{{ site.name }}</title>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -22,6 +29,7 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+  
 </head>
 
 <body>
@@ -181,6 +189,19 @@
           {% endif %}
           {% endfor %}
           {% endfor %}
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>All Pages</h2>
+              <ul>
+                {% for page in site.pages %}
+                  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
         </table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
