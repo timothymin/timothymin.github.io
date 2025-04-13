@@ -31,6 +31,9 @@ Then, $V^\pi$ is a fixed point of the Bellman equation.
 Also, it can be easily shown that the Bellman operator is $\gamma$-contraction (w.r.t. sup norm),
 theoretical results show that the value function is actually the **unique fixed point of the Bellman equation**.
 
+
+- **Bellman optimality equation**
+
 Then, how about the optimal policy?
 The optimal policy can be defined by the optimal value function, where the value function of optimal policy is always bigger than any other value function.
 
