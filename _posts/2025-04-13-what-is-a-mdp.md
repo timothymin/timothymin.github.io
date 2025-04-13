@@ -10,24 +10,22 @@ author: "Joonkyu Min"
 MDP is Markov Decision process, which is a sequential decision problem modeling that holds a Markov property.
 
 The basic components of MDP is 
-- **states** $S$
-- **actions** $A$
-- **Transition model** $P(s'|s,a)$
-- **Reward function** $R(s, a, s')$
-- **Discount factor**: $\gamma \in[0,1)$ gives smaller weights to future rewards
+- $S$: **states**
+- $A$: **actions**
+- $P(s'|s,a)$: **transition model**
+- $R(s, a, s')$: **reward**
+- $\gamma \in[0,1)$: **discount factor** that gives smaller weights to future rewards
 
 The states should be fully observable in MDP.
-If the states are not fully observable, it is called POMDP, which can be modified into MDP.
 
- **Policy** $\pi$ is a mapping from states to actions
-  $\pi:S\rightarrow \{a|a\in Actions(s), s\in S\}$ 
+The problem setting of which the states are not fully observable is called POMDP, which can be modified into MDP.
 
- We want to find the optimal policy $\pi^*$ that maximizes the expected sum of rewards
+In MDP, we can define a **Policy** $\pi:S\rightarrow \{a|a\in Actions(s), s\in S\}$, which is a mapping from states to actions.
+What we want to do in MDP is to find the optimal policy $\pi^*$ that maximizes the expected sum of rewards.
 
-
-Objective for MDP
-- **Return**: $G_{t} = \sum^\infty_{i=0}\gamma^i R_{t+i+1}$, where $R_{t} = R(s_{t},a_{t},s_{t+1})$
-- discounted utility (to avoid infinite utility value)
+That is, in a mathematical formation, we want to maximize the main objective **Return** for MDP.
+It can be also interpreted as dicounted utility function.
+$$G_{t} = \sum^\infty_{i=0}\gamma^i R_{t+i+1}$, where $R_{t} = R(s_{t},a_{t},s_{t+1})$$
 $$
 U([s_{0},s_{1}, s_{2}, \dots])=\sum\gamma^t R(s_{t})\le \frac{R_{max}}{1-\gamma}
 $$
