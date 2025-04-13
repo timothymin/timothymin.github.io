@@ -23,8 +23,7 @@ The problem setting of which the states are not fully observable is called POMDP
 This problem setting of MDP is the basic assumption in Reinforcement Learning.
 What we want to do in RL is to find the optimal control that maximizes the expected sum of rewards.
 
-In other words, we can define a **policy** 
-$\pi:S\rightarrow \{a\mid a\in A, s\in S\\}$, 
+In other words, we can define a **policy** $\pi:S\rightarrow \{a\mid a\in A, s\in S\\}$,
 which is a mapping from states to actions, and find the optimal policy function.
 
 That is, in a mathematical formation, we want to maximize the following dicounted utility function objective.
