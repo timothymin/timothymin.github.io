@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "What is a MDP?"
 categories: study
 permalink: /study/what-is-a-mdp/
