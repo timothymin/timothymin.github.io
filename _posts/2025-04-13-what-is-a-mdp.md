@@ -29,13 +29,9 @@ which is a mapping from states to actions, and find the optimal policy function.
 
 That is, in a mathematical formation, we want to maximize the following dicounted utility function objective.
 
-$
-G^{\pi}_{t} = \mathbb{E}^\pi \sum^\infty_{i=0}\gamma^i r_{t+i+1} \le \frac{\sup r}{1-\gamma}
-$, 
-
-where $r_{t} = r(s_{t},a_{t},s_{t+1})$
-
-$
-\pi_{s}^*=\arg \max_{\pi}G^\pi(s)
-$
-
+$$
+\begin{split}
+G^\pi_t &= \mathbb{E}^\pi \sum^\infty_{i=0}\gamma^i r_{t+i+1} \le \frac{\sup r}{1-\gamma} \\
+\pi_{s}^* &= \arg \max_{\pi}G^\pi(s)
+\end{split}
+$$
