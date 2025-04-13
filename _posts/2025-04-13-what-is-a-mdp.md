@@ -27,6 +27,7 @@ In other words, we can define a **policy** $\pi:S\rightarrow \{a\mid a\in A, s\i
 which is a mapping from states to actions, and find the optimal policy function.
 
 That is, in a mathematical formation, we want to maximize the following dicounted utility function objective.
+
 $$
 \begin{align}
 G^\pi_t &= \sum^\infty_{i=0}\gamma^i r_{t+i+1} \le \frac{\sup r}{1-\gamma} \\
