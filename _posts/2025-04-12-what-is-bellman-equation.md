@@ -16,9 +16,11 @@ V^\pi(s)&=\mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V^\pi(s'
 $$
 
 By defining a **Bellman operator** as a **functional** of value function,
+
 $$
 B^\pi[V](s) = \mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V(s')|s]
 $$
+
 the 1-step transition property can be written as $V^\pi = B^\pi[V^\pi]$.
 
 Define **Bellman equation** as 
