@@ -67,8 +67,6 @@ kramdown:
   input: GFM
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   math_engine: mathjax
-  math_engine_opts:
-    inline_delimiters: ['$','$']
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
