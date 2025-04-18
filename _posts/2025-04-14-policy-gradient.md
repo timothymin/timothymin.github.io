@@ -18,6 +18,7 @@ U(\theta)=\mathbb{E}\left[ \sum R(s_{t},a_{t});\pi_{\theta} \right]=\sum_{\tau}P
 $$
 
 The gradient of the objective w.r.t. $\theta$ becomes the expectation form of gradient of log likelihood.
+
 $$
 \begin{align}
 \nabla_{\theta}U(\theta) & = \nabla_{\theta}\sum_{\tau}P(\tau;\theta)R(\tau)  \\
@@ -62,7 +63,7 @@ This vanilla policy gradient is also called REINFORCE algorithm.
 
 This version of gradient has high variance.
 We can reduce the variance in following ways.
-1) remove past rewards
+**1. remove past rewards**
 
 $$
 \begin{align}
@@ -74,8 +75,7 @@ $$
 $$
 
 The past rewards is not influenced by the random action at time $t$, which makes the expected derivative 0.
-
-2) use value function as a baseline function
+**2. use value function as a baseline function**
 
 $$
 \begin{align}
@@ -88,11 +88,11 @@ Using the value function as a baseline is a intuitive choice. It doesn't depend 
 It updates the parameter to the direction of pushing up the likelihood of rewards higher than the average, and push down the likelihood of rewards lower than the average.
 Typically in practice, we train a value function network.
 
-3) use artificial $\gamma$
+**3. use artificial $\gamma$**
 By introducing an artificial discount factor, we give more weight to influence of near future rewards. 
 This makes the estimator slightly biased, but we can reduce variance.
 
-4) use value function for the $Q$ estimate
+**4. use value function for the $Q$ estimate**
 We can first substitute $G_t$ with a $Q$-value estimate without introducing bias.
 
 $$
