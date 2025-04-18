@@ -6,8 +6,13 @@ categories: study
 permalink: /study/policy-gradient/
 author: "Joonkyu Min"
 ---
+**Policy gradient** is a method of RL that optimize the policy directly, by computing the gradient of the objective function w.r.t. the policy function parameters $\theta$.
 
-**Policy gradient** is a method of RL that optimize the policy directly, by computing the gradient of the objective function w.r.t. the policy function parameters.
+$$
+\max_{\theta} J(\theta) = \mathbb{E}_{s_{0}\sim p_{0}}[V^{\pi_{\theta}}(s_{0})]
+$$
+
+It can be also thought as policy improvement on parametric policy functions.
 
 **Likelihood Ratio policy gradient** is the foundation idea of policy gradient. 
 Consider the likelihood of each trajectory under policy parameter $\theta$ as $P(\tau;\theta)$.
@@ -29,7 +34,7 @@ $$
 \end{align}
 $$
 
-This intuitively updates the parameter to the direction of pushing up the likelihood of high rewards.
+Doing gradient ascent intuitively updates the parameter to the direction of pushing up the likelihood of high rewards more.
 
 The gradient of likelihood actually becomes gradient of the policy because
 
@@ -91,12 +96,10 @@ It updates the parameter to the direction of pushing up the likelihood of reward
 Typically in practice, we train a value function network.
 
 **3. use artificial $\gamma$**
-
 By introducing an artificial discount factor, we give more weight to influence of near future rewards. 
 This makes the estimator slightly biased, but we can reduce variance.
 
-**4. use value function for the $Q$ estimate**
-
+**4. utilize value function for the $Q$ estimate**
 We can first substitute $G_t$ with a $Q$-value estimate without introducing bias.
 
 $$
