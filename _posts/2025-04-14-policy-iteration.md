@@ -25,11 +25,13 @@ Another method is called TD Learning, which uses sample of one step transition.
 We train a value function to minimize the gap, $L=\mathbb{E}\left[ \frac{1}{2}(V_{\phi}(s)-V^\pi(s))^2 \right]$.
 Using the 1-step property of value function, we approximate $V^\pi(s)\approx r_{0}+\gamma V_{\phi}(s_{1})$.
 The approximate stochastic gradient from the 1-step Bellman gap becomes
+
 $$
 \begin{align}
 \nabla_{\phi} \frac{1}{2}\left( V_{\phi}-r_{0}-\gamma V_{\phi}(s_{1})\big|_{\text{stop grad}} \right) 
 \end{align}
 $$
+
 This is not a unbiased estimate of stochastic gradient of $L$, but it is the most practical method to train the value function.
 
 **Policy improvement** is a step to compute the new policy $\pi'$ which is better or equal to the old policy $\pi$.
