@@ -10,6 +10,7 @@ author: "Joonkyu Min"
 In classical dynamic programming (DP) for reinforcement learning with a discrete MDP, **value iteration** is a method used to compute the **optimal value function**.
 
 By repeatedly applying the **Bellman optimality operator** to the value function, and assuming $0 < \gamma < 1$, the value function converges to the true **optimal value function** $V^*$.
-Once $V^*$ is obtained, the **greedy policy** with respect to $V^*$ can be extracted, which is guaranteed to be the **optimal policy**.
+
+Once {% raw %} $V^*$ {% endraw %} is obtained, the **greedy policy** with respect to {% raw %} $V^*$ {% endraw %} can be extracted, which is guaranteed to be the **optimal policy**.
 
 Although value iteration cannot be directly applied to real-world problems with large or continuous state spaces, it provides a theoretical foundation for modern deep reinforcement learning methods, such as **Deep Q-Networks (DQN)**.
