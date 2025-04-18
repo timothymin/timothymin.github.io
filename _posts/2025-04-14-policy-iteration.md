@@ -28,7 +28,7 @@ Using the 1-step property of value function, we approximate $V^\pi(s)\approx r_{
 The approximate stochastic gradient from the 1-step Bellman gap becomes
 $$
 \begin{align}
-\nabla_{\phi} \frac{1}{2}\left( V_{\phi}-r_{0}-\gamma \text{ stop\_gradient}(V_{\phi}(s_{1})) \right) 
+\nabla_{\phi} \frac{1}{2}\left( V_{\phi}-r_{0}-\gamma \text{ stop_gradient}(V_{\phi}(s_{1})) \right) 
 \end{align}
 $$
 This is not a unbiased estimate of stochastic gradient of $L$, but it is the most practical method to train the value function.

@@ -6,6 +6,7 @@ categories: study
 permalink: /study/policy-gradient/
 author: "Joonkyu Min"
 ---
+
 **Policy gradient** is a method of RL that optimize the policy directly, by computing the gradient of the objective function w.r.t. the policy function parameters $\theta$.
 
 $$
@@ -15,7 +16,7 @@ $$
 It can be also thought as policy improvement on parametric policy functions.
 
 **Likelihood Ratio policy gradient** is the foundation idea of policy gradient. 
-Consider the likelihood of each trajectory under policy parameter $\theta$ as $P(\tau;\theta)$.
+Consider the likelihood of each trajectory $\tau$ under policy parameter $\theta$ as $P(\tau;\theta)$.
 We want to maximize the following objective.
 
 $$
