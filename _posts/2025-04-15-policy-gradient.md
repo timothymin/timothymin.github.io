@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What is Policy Gradient?"
-date: 2025-04-14
+date: 2025-04-15
 categories: study
 permalink: /study/policy-gradient/
 author: "Joonkyu Min"
@@ -63,6 +63,7 @@ This vanilla policy gradient is also called REINFORCE algorithm.
 
 This version of gradient has high variance.
 We can reduce the variance in following ways.
+
 **1. remove past rewards**
 
 $$
@@ -75,6 +76,7 @@ $$
 $$
 
 The past rewards is not influenced by the random action at time $t$, which makes the expected derivative 0.
+
 **2. use value function as a baseline function**
 
 $$
