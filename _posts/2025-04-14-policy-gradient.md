@@ -7,7 +7,7 @@ permalink: /study/policy-gradient/
 author: "Joonkyu Min"
 ---
 
-Policy gradient is a method of RL that optimize the policy directly, by computing the gradient of the objective function w.r.t. the policy function parameters.
+**Policy gradient** is a method of RL that optimize the policy directly, by computing the gradient of the objective function w.r.t. the policy function parameters.
 
 **Likelihood Ratio policy gradient** is the foundation idea of policy gradient. 
 Consider the likelihood of each trajectory under policy parameter $\theta$ as $P(\tau;\theta)$.
@@ -18,7 +18,6 @@ U(\theta)=\mathbb{E}\left[ \sum R(s_{t},a_{t});\pi_{\theta} \right]=\sum_{\tau}P
 $$
 
 The gradient of the objective w.r.t. $\theta$ becomes the expectation form of gradient of log likelihood.
-
 $$
 \begin{align}
 \nabla_{\theta}U(\theta) & = \nabla_{\theta}\sum_{\tau}P(\tau;\theta)R(\tau)  \\
@@ -41,7 +40,6 @@ $$
 $$
 
 and the first term has nothing to do with $\theta$.
-
 Thus, we can compute the unbiased estimate of the gradient by this way.
 
 $$
@@ -51,8 +49,19 @@ $$
 \end{align}
 $$
 
+We can also subtract a baseline without harming the unbiasedness, but reduces variance.
+
+$$
+\begin{align}
+\nabla_{\theta}U(\theta)
+ & =\mathbb{E}\left[ \left(\sum_{t} \nabla_{\theta}\log \pi_{\theta}(a_{t}|s_{t})\right)(R(\tau)-b) \right]
+\end{align}
+$$
+
+This vanilla policy gradient is also called REINFORCE algorithm.
+
 This version of gradient has high variance.
-We can reduce the variance in two ways.
+We can reduce the variance in following ways.
 1. remove past rewards
 
 $$
@@ -66,16 +75,55 @@ $$
 
 The past rewards is not influenced by the random action at time $t$, which makes the expected derivative 0.
 
-2. subtract a baseline function that doesn't depend on action
+2. use value function as a baseline function
 
 $$
 \begin{align}
 \nabla_{\theta}U(\theta)
- & =\mathbb{E}\left[\sum_{t} \nabla_{\theta}\log \pi_{\theta}(a_{t}|s_{t})\gamma^t(G_{t}-b(s_{t})) \right]
+ & =\mathbb{E}\left[\sum_{t} \nabla_{\theta}\log \pi_{\theta}(a_{t}|s_{t})\gamma^t(G_{t}-V(s_{t})) \right]
 \end{align}
 $$
 
-Using the value function as a baseline is a intuitive choice.
+Using the value function as a baseline is a intuitive choice. It doesn't depend on actions, so it is still unbiased.
 It updates the parameter to the direction of pushing up the likelihood of rewards higher than the average, and push down the likelihood of rewards lower than the average.
+Typically in practice, we train a value function network.
 
-This vanilla policy gradient is also called REINFORCE algorithm.
+3. use artificial $\gamma$
+By introducing an artificial discount factor, we give more weight to influence of near future rewards. 
+This makes the estimator slightly biased, but we can reduce variance.
+
+4. use value function for the $Q$ estimate
+We can first substitute $G_t$ with a $Q$-value estimate without introducing bias.
+
+$$
+\begin{align}
+\nabla_{\theta}U(\theta)
+ & =\mathbb{E}\left[\sum_{t} \nabla_{\theta}\log \pi_{\theta}(a_{t}|s_{t})\gamma^t(\hat{Q}_{t}-V(s_{t})) \right]
+\end{align}
+$$
+
+Then, we can use TD for $Q$-value estimate.
+We can choose how much $k$ steps to look ahead, typically more you look the higher the variance but low bias.
+
+$$
+\begin{align}
+Q^\pi(s_{t}, a_{t})& = \mathbb{E}[r_{t}+\gamma V^\pi(s_{t+1})]  & &\approx \mathbb{E}[r_{t}+\gamma V_{\phi}(s_{t+1})]\\
+ & = \mathbb{E}[r_{t}+\gamma r_{t+1}+\gamma^2V^\pi(s_{t+2})]   & &\approx \mathbb{E}[r_{t}+\gamma r_{t+1}+\gamma^2V_\phi(s_{t+2})] \\
+ & = \cdots
+\end{align}
+$$
+
+There is also an idea called GAE (Generalized Advantage Estimation), that instead of choosing $k$, geometrically summing up all the estimators.
+
+$$
+\hat{A}^{GAE}_{t}=(1-\lambda)(\hat{A}^{TD_{1}}_{t}+\lambda\hat{A}^{TD_{2}}_{t}+\lambda^2\hat{A}^{TD_{3}}_{t}+\cdots)
+$$
+
+Using these techniques, it leads to A2C/A3C algorithm.
+
+$$
+\begin{align}
+\nabla_{\theta}U(\theta)
+ & =\mathbb{E}\left[\sum_{t} \nabla_{\theta}\log \pi_{\theta}(a_{t}|s_{t})\gamma^t(\hat{Q}-V_{\phi}(s_{t})) \right]
+\end{align}
+$$
