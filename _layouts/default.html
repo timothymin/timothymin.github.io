@@ -196,9 +196,10 @@
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Posts</h2>
+              {% assign sortedposts = site.posts | sort: 'date' %}
               <h4>Reinforcement Learning</h4>
               <ul>
-                {% for post in site.posts %}
+                {% for post in sortedposts %}
                 {% for cat in post.categories %}
                 {% if cat == 'RL'%}
                   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -209,7 +210,7 @@
 
               <h4>Information Theory</h4>
               <ul>
-                {% for post in site.posts %}
+                {% for post in sortedposts %}
                 {% for cat in post.categories %}
                 {% if cat == 'infotheory'%}
                   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -237,4 +238,3 @@
 </body>
 
 </html>
-
