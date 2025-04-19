@@ -6,6 +6,7 @@ categories: RL
 permalink: /RL/policy-iteration/
 author: "Joonkyu Min"
 ---
+
 Policy iteration a method used to compute the **optimal policy** that comes from the classical dynamic programming (DP) for reinforcement learning with a discrete MDP.
 
 It includes two key idea of RL, **policy evaluation** and **policy improvement**.
@@ -55,3 +56,10 @@ $$
 $V^{\pi_{k}}$ is the fixed point of the Bellman operator, so $V^{\pi_{k+1}}\ge V^{\pi_{k}}$.
 
 Policy Iteration is a conceptual background of Actor-Critic methods of Deep RL.
+
+
+
+
+reference
+
+R. Sutton, A. Barto, Reinforcement Learning: An Introduction. The MIT Press, 2018.

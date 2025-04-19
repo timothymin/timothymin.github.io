@@ -44,3 +44,6 @@ $$
 
 
 
+reference
+
+R. Sutton, A. Barto, Reinforcement Learning: An Introduction. The MIT Press, 2018.

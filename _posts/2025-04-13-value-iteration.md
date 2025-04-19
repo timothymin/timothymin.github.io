@@ -15,3 +15,10 @@ Once the optimal value function is obtained,
 the greedy policy with respect to $V^*$ can be extracted, which is guaranteed to be the optimal policy.
 
 Although value iteration cannot be directly applied to real-world problems with large or continuous state spaces, it provides a theoretical foundation for modern deep reinforcement learning methods, such as **Deep Q-Networks (DQN)**.
+
+
+
+
+reference
+
+R. Sutton, A. Barto, Reinforcement Learning: An Introduction. The MIT Press, 2018.

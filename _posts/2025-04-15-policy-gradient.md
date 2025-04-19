@@ -135,3 +135,12 @@ $$
  & =\mathbb{E}\left[\sum_{t} \nabla_{\theta}\log \pi_{\theta}(a_{t}|s_{t})\gamma^t(\hat{Q}-V_{\phi}(s_{t})) \right]
 \end{align}
 $$
+
+
+reference
+
+R. Williams. "Simple statistical gradient-following algorithms for connectionist reinforcement learning," in Machine learning, vol. 8, pp. 229–256, 1992.
+
+Sutton, R., et al. "Policy gradient methods for reinforcement learning with function approximation," in Advances in neural information processing systems, vol. 12, 1999.
+
+Mnih, V., et al, "Asynchronous methods for deep reinforcement learning," in International conference on machine learning, 2016, pp. 1928–1937.
