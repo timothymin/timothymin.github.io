@@ -68,3 +68,8 @@ I(X;Z,Y) & =I(X;Z)+I(X;Y|Z)\ge I(X;Z) \\ \\
 \therefore I(X;Y) & \ge I(X;Z)
 \end{align}
 $$
+
+---
+**Reference**
+
+T. Cover, Elements of information theory. John Wiley & Sons, 2006.
