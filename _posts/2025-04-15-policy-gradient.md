@@ -70,7 +70,7 @@ This vanilla policy gradient is also called REINFORCE algorithm.
 This version of gradient has high variance.
 We can reduce the variance in following ways.
 
-**1. remove past rewards**
+**1. Remove past rewards**
 
 $$
 \begin{align}
@@ -83,7 +83,7 @@ $$
 
 The past rewards is not influenced by the random action at time $t$, which makes the expected derivative 0.
 
-**2. use value function as a baseline function**
+**2. Use value function as a baseline function**
 
 $$
 \begin{align}
@@ -96,7 +96,7 @@ Using the value function as a baseline is a intuitive choice. It doesn't depend 
 It updates the parameter to the direction of pushing up the likelihood of rewards higher than the average, and push down the likelihood of rewards lower than the average.
 Typically in practice, we train a value function network.
 
-**3. utilize value function for the $Q$ estimate**
+**3. Utilize value function for the $Q$ estimate**
 
 We can first substitute $G_t$ with a $Q$-value estimate without introducing bias.
 
