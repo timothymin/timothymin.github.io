@@ -27,7 +27,8 @@ P(X_{1},\dots X_{k})=P(X_{n+1},\dots X_{n+k})
 \end{align}
 $$
 
-For a **stationary process**, $H(X_{n}|X^{n-1}_{1}) $ is a decreasing sequence, which has a lower bound 0.
+For a **stationary process**, 
+$H(X_{n}|X^{n-1}_{1})$ is a decreasing sequence, which has a lower bound 0.
 
 $$
 \begin{align}
