@@ -6,6 +6,7 @@ categories: RL
 permalink: /RL/policy-gradient/
 author: "Joonkyu Min"
 ---
+---
 
 **Policy gradient** is a method of RL that optimize the policy directly, by computing the gradient of the objective function w.r.t. the policy function parameters $\theta$.
 

@@ -6,6 +6,7 @@ categories: RL
 permalink: /RL/value-function/
 author: "Joonkyu Min"
 ---
+---
 
 In RL, we try to maximize the long-term collected rewards.
 

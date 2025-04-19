@@ -6,6 +6,7 @@ categories: RL
 permalink: /RL/value-iteration/
 author: "Joonkyu Min"
 ---
+---
 
 In classical dynamic programming (DP) for reinforcement learning with a discrete MDP, **value iteration** is a method used to compute the **optimal value function**.
 

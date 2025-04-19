@@ -6,6 +6,7 @@ categories: RL
 permalink: /RL/bellman-equation/
 author: "Joonkyu Min"
 ---
+---
 
 Consider the 1-step transition property of value function.
 
