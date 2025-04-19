@@ -67,9 +67,9 @@ $$
 \begin{align}
  & D(p(x_{n},x_{n+1})\parallel q(x_{n},x_{n+1}))  \\ \\
  & =D(p(x_{n})\parallel q(x_{n}))+D(p(x_{n+1}|x_{n})\parallel q(x_{n+1}|x_{n}))  \\
-& = D(p(x_{n})\parallel q(x_{n}))  & (\because p(x_{n+1}|x_{n})=q(x_{n+1}|x_{n})) \\ \\
+& = D(p(x_{n})\parallel q(x_{n}))  (\because p(x_{n+1}|x_{n})=q(x_{n+1}|x_{n})) \\ \\
 & =D(p(x_{n+1})\parallel q(x_{n+1}))+D(p(x_{n}|x_{n+1})\parallel q(x_{n}|x_{n+1})) \\
- & \geq D(p(x_{n+1})\parallel q(x_{n+1})) & (\because D_{KL}\geq 0)
+ & \geq D(p(x_{n+1})\parallel q(x_{n+1}))  (\because D_{KL}\geq 0)
 \end{align}
 $$
 
