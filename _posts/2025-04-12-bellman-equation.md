@@ -2,8 +2,8 @@
 layout: post
 title: "What is Bellman equation?"
 date: 2025-04-12
-categories: study
-permalink: /study/what-is-bellman-equation/
+categories: RL
+permalink: /RL/bellman-equation/
 author: "Joonkyu Min"
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 title: "What is a value function?"
 date: 2025-04-11
-categories: study
-permalink: /study/what-is-a-value-function/
+categories: RL
+permalink: /RL/value-function/
 author: "Joonkyu Min"
 ---
 

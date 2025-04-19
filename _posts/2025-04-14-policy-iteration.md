@@ -2,8 +2,8 @@
 layout: post
 title: "What is Policy Iteration?"
 date: 2025-04-14
-categories: study
-permalink: /study/policy-iteration/
+categories: RL
+permalink: /RL/policy-iteration/
 author: "Joonkyu Min"
 ---
 Policy iteration a method used to compute the **optimal policy** that comes from the classical dynamic programming (DP) for reinforcement learning with a discrete MDP.

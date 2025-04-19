@@ -2,8 +2,8 @@
 layout: post
 title: "What is Value Iteration?"
 date: 2025-04-13
-categories: study
-permalink: /study/value-iteration/
+categories: RL
+permalink: /RL/value-iteration/
 author: "Joonkyu Min"
 ---
 

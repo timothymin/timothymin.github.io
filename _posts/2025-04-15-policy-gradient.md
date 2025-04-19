@@ -2,8 +2,8 @@
 layout: post
 title: "What is Policy Gradient?"
 date: 2025-04-15
-categories: study
-permalink: /study/policy-gradient/
+categories: RL
+permalink: /RL/policy-gradient/
 author: "Joonkyu Min"
 ---
 
