@@ -75,5 +75,6 @@ $$
 
 Therefore, by setting $q=\mu$ be a uniform stationary distribution, $D(\mu_{n}\parallel \mu)\geq D(\mu_{n+1}\parallel \mu)$
 
-Since $\mu$ is uniform, $$D(\mu_{n}\parallel \mu)=\log|\chi|-H(\mu_{n}) $$ is a decreasing sequence, so $H(\mu_{n})$ is an increasing sequence.
-
+Since $\mu$ is uniform, 
+$D(\mu_{n}\parallel \mu)=\log|\chi|-H(\mu_{n})$ is a decreasing sequence, 
+so $H(\mu_{n})$ is an increasing sequence.
