@@ -49,11 +49,17 @@ I(X_{1},X_{2},\dots,X_{n};Y)=\sum_{i=1}^nI(X_{i};Y|X_{1},\dots,X_{i-1})
 $$
 
 
-**Data processing inequality**
+<!-- **Data processing inequality** -->
 
-One important result of mutual information is the data processing inequality.
+One important result of mutual information is the **data processing inequality**.
 
-In a Markov chain $X\to Y\to Z$, data processing inequality says $I(X;Y)\ge I(X;Z)$, which means that as the data is processed, mutual information is lost.
+In a Markov chain 
+
+$$
+X\to Y\to Z
+$$
+
+data processing inequality says $I(X;Y)\ge I(X;Z)$, which means that as the data is processed, mutual information is lost.
 
 $$
 \begin{align}
@@ -62,6 +68,3 @@ I(X;Z,Y) & =I(X;Z)+I(X;Y|Z)\ge I(X;Z) \\ \\
 \therefore I(X;Y) & \ge I(X;Z)
 \end{align}
 $$
-
-
-
