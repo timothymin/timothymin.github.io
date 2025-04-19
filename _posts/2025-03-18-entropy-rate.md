@@ -27,7 +27,7 @@ P(X_{1},\dots X_{k})=P(X_{n+1},\dots X_{n+k})
 \end{align}
 $$
 
-For a **stationary process**, $H(X_{n}|X^{n-1}_{1})$ is a decreasing sequence, which has a lower bound 0.
+For a **stationary process**, $H(X_{n}|X^{n-1}_{1}) $ is a decreasing sequence, which has a lower bound 0.
 
 $$
 \begin{align}
@@ -35,6 +35,7 @@ H(X_{n}|X^{n-1}_{1}) & \leq H(X_{n}|X_{2}^{n-1}) \\
  & =H(X_{n-1}|X_{1}^{n-2})
 \end{align}
 $$
+
 Therefore, it converges.
 
 A useful random process is a case of **stationary Markov process**, which is a Markov process with transition probability is fixed. 
@@ -74,5 +75,5 @@ $$
 
 Therefore, by setting $q=\mu$ be a uniform stationary distribution, $D(\mu_{n}\parallel \mu)\geq D(\mu_{n+1}\parallel \mu)$
 
-Since $\mu$ is uniform, $D(\mu_{n}\parallel \mu)=\log|\chi|-H(\mu_{n})$ is a decreasing sequence, so $H(\mu_{n})$ is an increasing sequence.
+Since $\mu$ is uniform, $$D(\mu_{n}\parallel \mu)=\log|\chi|-H(\mu_{n}) $$ is a decreasing sequence, so $H(\mu_{n})$ is an increasing sequence.
 
