@@ -42,15 +42,15 @@ $$
 Also, $I(X;X)=H(X)$, which once again shows why entropy can be interpreted as self information.
 
 Mutual entropy also satisfies chain rule, expressed as follows.
+
 $$
 I(X_{1},X_{2},\dots,X_{n};Y)=\sum_{i=1}^nI(X_{i};Y|X_{1},\dots,X_{i-1})
 $$
 
 
 **Data processing inequality**
-One important result of mutual information is the data processing inequality.
 
-![[data processing inequality]]
+One important result of mutual information is the data processing inequality.
 
 In a Markov chain $X\to Y\to Z$, data processing inequality says $I(X;Y)\ge I(X;Z)$, which means that as the data is processed, mutual information is lost.
 
