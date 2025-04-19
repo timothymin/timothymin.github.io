@@ -67,6 +67,8 @@ $$
 
 This vanilla policy gradient is also called REINFORCE algorithm.
 
+
+
 This version of gradient has high variance.
 We can reduce the variance in following ways.
 
@@ -125,7 +127,7 @@ $$
 \hat{A}^{GAE}_{t}=(1-\lambda)(\hat{A}^{TD_{1}}_{t}+\lambda\hat{A}^{TD_{2}}_{t}+\lambda^2\hat{A}^{TD_{3}}_{t}+\cdots)
 $$
 
-Using these techniques, it leads to A2C/A3C algorithm.
+Summing up these techniques, it leads to A2C/A3C algorithm.
 
 $$
 \begin{align}
