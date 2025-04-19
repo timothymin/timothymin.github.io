@@ -31,7 +31,8 @@ I(X;Y) & =\sum_{x,y}p(x,y)\log {\frac{p(x,y)}{p(x)p(y)}} \\
 \end{align}
 $$
 
-This gives intuition that conditioning reduces entropy, $H(X|Y)\leq H(X)$.
+This gives intuition that conditioning reduces entropy, 
+$H(X|Y)\leq H(X)$.
 
 Since $H(X\mid Y)=H(X,Y)-H(Y)$, mutual information can be also expressed as a symmetric form.
 
