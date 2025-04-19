@@ -96,11 +96,8 @@ Using the value function as a baseline is a intuitive choice. It doesn't depend 
 It updates the parameter to the direction of pushing up the likelihood of rewards higher than the average, and push down the likelihood of rewards lower than the average.
 Typically in practice, we train a value function network.
 
-**3. use artificial $\gamma$**
-By introducing an artificial discount factor, we give more weight to influence of near future rewards. 
-This makes the estimator slightly biased, but we can reduce variance.
+**3. utilize value function for the $Q$ estimate**
 
-**4. utilize value function for the $Q$ estimate**
 We can first substitute $G_t$ with a $Q$-value estimate without introducing bias.
 
 $$
