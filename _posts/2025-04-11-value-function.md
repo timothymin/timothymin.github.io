@@ -43,7 +43,8 @@ Q^\pi(s)&=\mathbb{E}_{a'\sim \pi(\cdot|s'), s'\sim p(\cdot|s,a)}[r+\gamma Q^\pi(
 $$
 
 
+---
 
-**reference**
+**Reference**
 
 R. Sutton, A. Barto, Reinforcement Learning: An Introduction. The MIT Press, 2018.

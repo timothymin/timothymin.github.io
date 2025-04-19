@@ -18,7 +18,8 @@ Although value iteration cannot be directly applied to real-world problems with 
 
 
 
+---
 
-**reference**
+**Reference**
 
 R. Sutton, A. Barto, Reinforcement Learning: An Introduction. The MIT Press, 2018.

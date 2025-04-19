@@ -59,7 +59,8 @@ Policy Iteration is a conceptual background of Actor-Critic methods of Deep RL.
 
 
 
+---
 
-**reference**
+**Reference**
 
 R. Sutton, A. Barto, Reinforcement Learning: An Introduction. The MIT Press, 2018.

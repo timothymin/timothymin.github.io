@@ -56,7 +56,8 @@ Optimal value functions are unique, but optimal policies are not actually unique
 
 
 
+---
 
-**reference**
+**Reference**
 
 R. Sutton, A. Barto, Reinforcement Learning: An Introduction. The MIT Press, 2018.

@@ -137,8 +137,9 @@ $$
 $$
 
 
+---
 
-**reference**
+**Reference**
 
 R. Williams. "Simple statistical gradient-following algorithms for connectionist reinforcement learning," in Machine learning, vol. 8, pp. 229–256, 1992.
 
