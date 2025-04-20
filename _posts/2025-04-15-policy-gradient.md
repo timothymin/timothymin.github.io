@@ -35,9 +35,9 @@ $$
 \end{align}
 $$
 
-Doing gradient ascent intuitively updates the parameter to the direction of pushing up the likelihood of high rewards more.
+Doing gradient ascent intuitively updates the parameter to the direction of pushing up the likelihood proportional to the rewards.
 
-The gradient of likelihood actually becomes gradient of the policy because
+The gradient of likelihood can be computed via gradient of the policy because
 
 $$
 \begin{align}
@@ -56,7 +56,7 @@ $$
 \end{align}
 $$
 
-We can also subtract a baseline without harming the unbiasedness, but reduces variance.
+We can also subtract a baseline without harming the unbiasedness, but reducing variance.
 
 $$
 \begin{align}
@@ -65,7 +65,7 @@ $$
 \end{align}
 $$
 
-This vanilla policy gradient is also called REINFORCE algorithm.
+This vanilla policy gradient is known as REINFORCE algorithm.
 
 
 
@@ -109,9 +109,9 @@ $$
 \end{align}
 $$
 
-However, replacing a new network for Q-value will significantly increase variance and bias, especially in initial state.
+However, replacing a new network for Q-value will significantly increase variance and bias, especially in the initial training phase.
 We can use TD for $Q$-value estimate, in order to lower the variance.
-We can choose how much $k$ steps to look ahead, typically more you look the higher the variance but low bias.
+We can choose how much $k$ steps to look ahead, where there exist a tradeoff between variance and bias: the more steps we look ahead, the lower the bias but the higher the variance.
 
 $$
 \begin{align}
@@ -121,13 +121,13 @@ Q^\pi(s_{t}, a_{t})& = \mathbb{E}[r_{t}+\gamma V^\pi(s_{t+1})]  & &\approx \math
 \end{align}
 $$
 
-There is also an idea called GAE (Generalized Advantage Estimation), that instead of choosing $k$, geometrically summing up all the estimators.
+There is also an advanced technique called **GAE** (Generalized Advantage Estimation), which is geometrically summing up all the estimators instead of choosing $k$.
 
 $$
 \hat{A}^{GAE}_{t}=(1-\lambda)(\hat{A}^{TD_{1}}_{t}+\lambda\hat{A}^{TD_{2}}_{t}+\lambda^2\hat{A}^{TD_{3}}_{t}+\cdots)
 $$
 
-Summing up these techniques, it leads to A2C/A3C algorithm.
+Adding these three techniques to the vanilla policy gradient method, it leads to A2C/A3C algorithm.
 
 $$
 \begin{align}
@@ -144,5 +144,7 @@ $$
 R. Williams. "Simple statistical gradient-following algorithms for connectionist reinforcement learning," in Machine learning, vol. 8, pp. 229–256, 1992.
 
 Sutton, R., et al. "Policy gradient methods for reinforcement learning with function approximation," in Advances in neural information processing systems, vol. 12, 1999.
+
+Schulman, J., et al. "High-dimensional continuous control using generalized advantage estimation," in arXiv preprint arXiv:1506.02438, 2015.
 
 Mnih, V., et al, "Asynchronous methods for deep reinforcement learning," in International conference on machine learning, 2016, pp. 1928–1937.

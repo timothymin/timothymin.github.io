@@ -7,13 +7,13 @@ permalink: /RL/value-function/
 author: "Joonkyu Min"
 ---
 
-In RL, we try to maximize the long-term collected rewards.
+In RL, we try to maximize the long-term collected discounted rewards.
 
 $$
 G^\pi_t = \sum^\infty_{i=0}\gamma^i r_{t+i+1} \le \frac{\sup r}{1-\gamma}
 $$
 
-Value in MDP is the expected utility of a particular state, following a given policy.
+**Value** in MDP is the **expected utility** of a particular state, following a given policy.
 
 There are two value functions, state value function $V$, and state-action value function $Q$ .
 
@@ -26,13 +26,13 @@ $$
 
 
 - **State action value function**
-Q-function is a state-action value function, which is a mapping from state $s$ and action $a$ to the expected return starting from state $s$ and action $a$, following $\pi$ .
+State-action value function, or Q-function, is a mapping from state $s$ and action $a$ to the expected return starting from state $s$ and action $a$, following $\pi$ .
 
 $$
 Q^\pi(s)=\mathbb{E}^\pi[G_t|s_{t}=s,a_{t}=a]
 $$
 
-Due to the Markovian property, value function holds a special property (1-step transition property).
+Due to the Markovian property, value function holds a special property (**1-step transition property**).
 This leads to the famous **Bellman equation**.
 
 $$

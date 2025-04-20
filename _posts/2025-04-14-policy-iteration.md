@@ -7,22 +7,25 @@ permalink: /RL/policy-iteration/
 author: "Joonkyu Min"
 ---
 
-Policy iteration a method used to compute the **optimal policy** that comes from the classical dynamic programming (DP) for reinforcement learning with a discrete MDP.
+Policy iteration a method used to compute the **optimal policy** that comes from the classical dynamic programming for reinforcement learning with a discrete MDP.
 
 It includes two key idea of RL, **policy evaluation** and **policy improvement**.
 
 **Policy evaluation** is a step to compute value function of the current policy, which gives information how the current policy is good.
 
-How do we evaluate the policy? We should estimate the value function of the policy $\pi$.
+How do we evaluate the policy? 
+We should estimate the value function of the policy $\pi$.
 There are two popular methods for this.
 
 **1. MC (Monte-Carlo)**
 
-First is computing the Monte-Carlo estimate. We sample trajectories, and calculate the expectation of sum of rewards. This is a computationally expensive process.
+First is computing the Monte-Carlo estimate. 
+We sample **trajectories**, and calculate the expectation of sum of rewards. 
+This is a computationally expensive process.
 
 **2. TD Learning (Bootstrap)**
 
-Another method is called TD Learning, which uses sample of one step transition. 
+Another method is called TD Learning, which uses sample of 1-step **transition**. 
 We train a value function to minimize the gap, $L=\mathbb{E}\left[ \frac{1}{2}(V_{\phi}(s)-V^\pi(s))^2 \right]$.
 Using the 1-step property of value function, we approximate $V^\pi(s)\approx r_{0}+\gamma V_{\phi}(s_{1})$.
 The approximate stochastic gradient from the 1-step Bellman gap becomes
@@ -55,7 +58,7 @@ $$
 
 $V^{\pi_{k}}$ is the fixed point of the Bellman operator, so $V^{\pi_{k+1}}\ge V^{\pi_{k}}$.
 
-Policy Iteration is a conceptual background of Actor-Critic methods of Deep RL.
+Policy Iteration provides conceptual background of Actor-Critic methods of Deep RL.
 
 
 
