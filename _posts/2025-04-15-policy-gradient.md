@@ -127,7 +127,7 @@ $$
 \hat{A}^{GAE}_{t}=(1-\lambda)(\hat{A}^{TD_{1}}_{t}+\lambda\hat{A}^{TD_{2}}_{t}+\lambda^2\hat{A}^{TD_{3}}_{t}+\cdots)
 $$
 
-Adding these three techniques to the vanilla policy gradient method, it leads to A2C/A3C algorithm.
+Adding these three techniques to the vanilla policy gradient method, it leads to **A2C/A3C** algorithm.
 
 $$
 \begin{align}
