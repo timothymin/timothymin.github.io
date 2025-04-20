@@ -69,6 +69,37 @@ I(X;Z,Y) & =I(X;Z)+I(X;Y|Z)\ge I(X;Z) \\ \\
 \end{align}
 $$
 
+
+Using the mutual information, there is an important principle in ML called Information Bottleneck.
+
+In a compression framework, which finds an representation $Z$ of $X$, expressed as a Markov chain.
+
+$$
+X\to Z\to Y
+$$
+
+The IB objective is $L=I(X;Z)-\beta I(Z;Y)$, where $I(X;Y)$ is a fixed quantity.
+
+Using the results of data processing inequality, $I(X;Z)$ is always larger than $I(X;Y)$, 
+so minimizing $I(X;Z)$ is reducing the gap with $I(X;Y)$ by losing the unnecessary information of input $X$.
+
+Also maximizing $I(Y;Z)$ is making the representation $Z$ to maximize information about target $Y$.
+
+Precisely,
+
+$$
+\begin{align}
+I(X;Z,Y) &= I(X;Z) + I(X;Y|Z) = I(X;Z) \\
+&= I(X;Y)+I(X;Z|Y) \\ \\
+
+I(Y;X,Z) &= I(Y;Z)+I(Y;X|Z)=I(Y;Z) \\
+&= I(Y;X)+I(Y;Z|X) \\ \\
+\end{align}
+$$
+
+Minimizing $I(X;Z)$ is minimizing $I(X;Z|Y)$, which indicates the irrelevant information of $Y$ from $X$.
+Maximizing $I(Y;Z)$ is maximizing $I(Y;Z|X)$, which indicates extra information of $Y$ in $Z$.
+
 ---
 **Reference**
 
