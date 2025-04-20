@@ -19,7 +19,7 @@ $$
 
 How do we know the conditional entropy **converges**?
 If the random process is **stationary process**, it is known that both definition converges.
-**Stationary process**is a random process that the joint distribution doesn't change.
+**Stationary process** is a random process that the joint distribution doesn't change.
 
 $$
 \begin{align}
@@ -54,7 +54,9 @@ H(X) & =\lim_{ n \to \infty }H(X_{n}|X_{1}^{n-1}) \\
 \end{align}
 $$
 
-Using this result, we can somehow prove the **second law of thermodynamics**, "Entropy of a closed physical system always increases".
+Using this result, we can somehow prove the **second law of thermodynamics**, 
+
+"Entropy of a closed physical system always increases".
 
 Physical systems governed by **Newtonian dynamics** can be modeled as Markov chain because the future state of the system is fully determined by its current state.
 This can be extended to stochastic settings such as **Langevin dynamics**, so the Markov process setting is universal.

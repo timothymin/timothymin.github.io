@@ -7,7 +7,7 @@ permalink: /RL/bellman-equation/
 author: "Joonkyu Min"
 ---
 
-Consider the 1-step transition property of value function.
+The following equation is the 1-step transition property of value function.
 
 $$
 \begin{align}
@@ -15,30 +15,30 @@ V^\pi(s)&=\mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V^\pi(s'
 \end{align}
 $$
 
-By defining a **Bellman operator** as a **functional** of value function,
+By defining a **Bellman operator** as a **functional**,
 
 $$
 B^\pi[V](s) = \mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V(s')|s]
 $$
 
-the 1-step transition property can be written as $V^\pi = B^\pi[V^\pi]$.
+the 1-step transition property of value function can be written as $V^\pi = B^\pi[V^\pi]$.
 
 Define **Bellman equation** as 
 
 $$
-V(s)=B^\pi[V](s)
+V(s)=B^\pi[V](s)=\mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V(s')|s]
 $$
 
-Then, $V^\pi$ is a fixed point of the Bellman equation.
+Then, value function $V^\pi$ is a fixed point of the Bellman equation.
 Also, it can be easily shown that the Bellman operator is $\gamma$-contraction (w.r.t. sup norm),
-theoretical results show that the value function is actually the **unique fixed point of the Bellman equation**.
+and theoretical results show that $V^\pi$ becomes the **unique fixed point of the Bellman equation**.
 
 
 
-- **Bellman optimality equation**
+Then, how about the **optimal policy**?
 
-Then, how about the optimal policy?
-The optimal policy can be defined by the optimal value function, where the value function of optimal policy is always bigger than any other value function.
+The **optimal policy** can be defined by the **optimal value function**.
+Optimal value function is the particular value function following an optimal policy, that is always bigger than value functions of any other policies.
 
 $$
 V^{\pi^*}(s) \ge V^\pi(s), \forall s\in S
@@ -50,7 +50,7 @@ $$
 V(s)=\max_{a\in A}\mathbb{E}_{s'\sim p(\cdot|s,a)}[r+\gamma V(s')|s, a]
 $$
 
-It can be also shown that the optimal value function is the **unique fixed point of the** **Bellman optimality equation**.
+It can be also shown that the optimal value function is the **unique fixed point of the Bellman optimality equation**.
 
 Optimal value functions are unique, but optimal policies are not actually unique.
 
