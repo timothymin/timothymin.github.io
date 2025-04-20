@@ -18,6 +18,7 @@ $$
 There are two value functions, state value function $V$, and state-action value function $Q$ .
 
 - **State value function**
+
 State value function is a mapping from state $s$ to the expected return starting from $s$, following $\pi$ .
 
 $$
@@ -26,7 +27,8 @@ $$
 
 
 - **State action value function**
-State-action value function, or Q-function, is a mapping from state $s$ and action $a$ to the expected return starting from state $s$ and action $a$, following $\pi$ .
+
+State-action value function, or **Q-function**, is a mapping from state $s$ and action $a$ to the expected return starting from state $s$ and action $a$, following $\pi$ .
 
 $$
 Q^\pi(s)=\mathbb{E}^\pi[G_t|s_{t}=s,a_{t}=a]
