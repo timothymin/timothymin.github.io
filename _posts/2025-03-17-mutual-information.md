@@ -97,8 +97,10 @@ I(Y;X,Z) &= I(Y;Z)+I(Y;X|Z)=I(Y;Z) \\
 \end{align}
 $$
 
-Minimizing $I(X;Z)$ is minimizing $I(X;Z|Y)$, which indicates the irrelevant information of $Y$ from $X$.
-Maximizing $I(Y;Z)$ is maximizing $I(Y;Z|X)$, which indicates extra information of $Y$ in $Z$.
+Minimizing $I(X;Z)$ is minimizing $I(X;Z|Y)$, 
+which indicates the irrelevant information of $Y$ from $X$.
+Maximizing $I(Y;Z)$ is maximizing $I(Y;Z|X)$, 
+which indicates extra information of $Y$ in $Z$.
 
 ---
 **Reference**
