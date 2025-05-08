@@ -15,7 +15,7 @@ V^\pi(s)&=\mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V^\pi(s'
 \end{align}
 $$
 
-By defining a **Bellman operator** as a **functional**,
+By defining a **Bellman operator** as a **functional** of value function,
 
 $$
 B^\pi[V](s) = \mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V(s')|s]
@@ -23,17 +23,14 @@ $$
 
 the 1-step transition property of value function can be written as $V^\pi = B^\pi[V^\pi]$.
 
-Define **Bellman equation** as 
+**Bellman equation** is defined as
 
 $$
 V(s)=B^\pi[V](s)=\mathbb{E}_{a\sim \pi(\cdot|s), s'\sim p(\cdot|s,a)}[r+\gamma V(s')|s]
 $$
 
 Then, value function $V^\pi$ is a fixed point of the Bellman equation.
-Also, it can be easily shown that the Bellman operator is $\gamma$-contraction (w.r.t. sup norm),
-and theoretical results show that $V^\pi$ becomes the **unique fixed point of the Bellman equation**.
-
-
+It is also known that $V^\pi$ is the **unique fixed point of Bellman equation**, proved by the fact that the Bellman operator is a $\gamma$-contraction w.r.t. sup norm.
 
 Then, how about the **optimal policy**?
 
