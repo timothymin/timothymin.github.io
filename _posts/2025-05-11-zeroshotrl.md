@@ -10,8 +10,8 @@ author: "Joonkyu Min"
 
 To develop a truly generalized reinforcement learning agent, it must be capable of generating useful policies for arbitrary rewards without training specified agent for each tasks.
 The zero-shot reinforcement learning problem addresses this challenge by training agents without access to explicit reward signals, and producing sub-optimal policies on new rewards at test time.
-%% Zero shot RL is even more advantageous in offline settings, where agents can be pretrained on massive datasets without online interactions.
-It is possible to develop generalizable and reusable agents that can be directly deployed in physical environments, particularly in robotic applications, without requiring additional data collection, which can be expensive or dangerous. %%
+<!-- %% Zero shot RL is even more advantageous in offline settings, where agents can be pretrained on massive datasets without online interactions.
+It is possible to develop generalizable and reusable agents that can be directly deployed in physical environments, particularly in robotic applications, without requiring additional data collection, which can be expensive or dangerous. %% -->
 
 Recent advancement on zero-shot RL build on successor representations, which model the expected future state occupancy under a given policy.
 
