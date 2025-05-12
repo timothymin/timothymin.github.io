@@ -27,8 +27,6 @@ However, SF has a fundamental issue that optimality is only guaranteed for the r
 
 Forward-Backward (FB) representation solves this issue by employing continuous functions to model the successor measures.
 
-FB representation approximate successor measure defined as 
-
 $$
 \begin{equation}
 \begin{split}
@@ -37,8 +35,8 @@ M^\pi_z(s_0, a_0, s) &= \sum_{t\ge0} \gamma^t \Pr(s_{t+1} = s \mid s_0, a_0, \pi
 \end{equation}
 $$
 
-in finite-dimensional space by using two parametric functions: forward mapping $F_{z}^T: S\times A\to \mathbb{R}^d$, 
-and backward mapping $B: \mathbb{R}^d\to S$, such that the successor measure is represented as 
+FB representation approximate successor measure in finite-dimensional space by using two parametric functions: forward mapping $F_{z}^T: S\times A\to \mathbb{R}^d$, 
+and backward mapping $B: \mathbb{R}^d\to S$, represented as 
 
 $$
 \begin{equation}
@@ -53,7 +51,7 @@ where $\rho$ is the data distribution.
 For any reward function $R$, 
 we can estimate the latent vector of reward by $z_R =\mathbb{E}_\rho[R(s)B(s)]$, using small amount of samples of given data.
 
-Theoretically, the optimal $Q$-function and optimal policy of the reward parameterized by $z_R$ can be derived by 
+Theoretically, the optimal Q-function and optimal policy of the reward parameterized by $z_R$ can be derived by 
 
 $$
 \begin{equation}
