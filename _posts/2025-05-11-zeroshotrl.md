@@ -9,11 +9,19 @@ author: "Joonkyu Min"
 
 
 To develop a truly generalized reinforcement learning agent, it must be capable of generating useful policies for arbitrary rewards without training specified agent for each tasks.
-The zero-shot reinforcement learning problem addresses this challenge by training agents without access to explicit reward signals, and producing sub-optimal policies on new rewards at test time.
+Zero-shot reinforcement learning problem address this challenge by training agents without access to explicit reward signals, and producing sub-optimal policies on new rewards at test time.
 
 Recent advancement on zero-shot RL build on successor representations, which model the expected future state occupancy under a given policy.
 
 Successor features(SF) based methods generalizes successor representations by expressing rewards as linear combinations of predefined features, allowing the Q-function to be decomposed as a linear span of successor features.
+
+$$
+\begin{align}
+r(s,a,s') & = \phi(s,a,s')^Tw \\
+Q^\pi(s,a) & = \psi^\pi(s,a)^Tw
+\end{align}
+$$
+
 By learning the decoupled dynamics of the environment from reward, SF allows to transfer agents across tasks.
 However, SF has a fundamental issue that optimality is only guaranteed for the rewards that lie within the linear span of the basic features.
 
@@ -98,3 +106,5 @@ pp. 613–624, 1993.
 A. Barreto, W. Dabney, R. Munos, J. J. Hunt, T. Schaul, H. P . van Hasselt, and D. Silver, “Successor features for transfer in reinforcement learning,” Advances in neural information processing systems, vol. 30, 2017.
 
 A. Touati and Y. Ollivier, “Learning one representation to optimize all rewards,” Advances in Neural Information Processing Systems, vol. 34, pp. 13–23, 2021.
+
+S. Jeen, T. Bewley, and J. Cullen, “Zero-shot reinforcement learning from low quality data,” Advances in Neural Information Processing Systems, vol. 37, pp. 16894–16942, 2024.
