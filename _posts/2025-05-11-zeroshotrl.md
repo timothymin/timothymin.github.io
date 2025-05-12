@@ -84,8 +84,8 @@ $$
 \begin{split}
     L_{\text{MC}} = 
 &\mathbb{E}_{\substack{s,s'\sim\rho\\ a \sim \mu(\cdot|s)}}
-\left[ F(s, a, z)^\top B(s') \right]\\
-	-&\mathbb{E}_{\substack{(s,a),s'\sim\rho}}
+\left[ F(s, a, z)^\top B(s') \right] 
+- \mathbb{E}_{\substack{(s,a),s'\sim\rho}}
 \left[ F(s, a, z)^\top B(s') \right] - H(\mu),
 \end{split}
 \end{equation}
