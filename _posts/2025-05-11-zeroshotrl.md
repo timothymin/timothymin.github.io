@@ -10,8 +10,6 @@ author: "Joonkyu Min"
 
 To develop a truly generalized reinforcement learning agent, it must be capable of generating useful policies for arbitrary rewards without training specified agent for each tasks.
 The zero-shot reinforcement learning problem addresses this challenge by training agents without access to explicit reward signals, and producing sub-optimal policies on new rewards at test time.
-<!-- %% Zero shot RL is even more advantageous in offline settings, where agents can be pretrained on massive datasets without online interactions.
-It is possible to develop generalizable and reusable agents that can be directly deployed in physical environments, particularly in robotic applications, without requiring additional data collection, which can be expensive or dangerous. %% -->
 
 Recent advancement on zero-shot RL build on successor representations, which model the expected future state occupancy under a given policy.
 
@@ -21,46 +19,60 @@ However, SF has a fundamental issue that optimality is only guaranteed for the r
 
 Forward-Backward (FB) representation solves this issue by employing continuous functions to model the successor measures.
 
-FB representation approximate successor measure defined as  
-$$\begin{equation}
+FB representation approximate successor measure defined as 
+
+$$
+\begin{equation}
 \begin{split}
 M^\pi_z(s_0, a_0, s) &= \sum_{t\ge0} \gamma^t \Pr(s_{t+1} = s \mid s_0, a_0, \pi),
 \end{split}
-\end{equation}$$
-in finite-dimensional space by using two parametric functions: forward mapping $F_{z}^T: S\times A\to \mathbb{R}^d$, and backward mapping $B: \mathbb{R}^d\to S$, such that the successor measure is represented as 
+\end{equation}
+$$
 
-$$\begin{equation}
+in finite-dimensional space by using two parametric functions: forward mapping $F_{z}^T: S\times A\to \mathbb{R}^d$, 
+and backward mapping $B: \mathbb{R}^d\to S$, such that the successor measure is represented as 
+
+$$
+\begin{equation}
 \begin{split}
 M^\pi_z(s_0, a_0, s')=F(s_0,a_0,z)^TB(s')\rho(ds'),\\
 \end{split}
-\end{equation}$$
+\end{equation}
+$$
 
 where $\rho$ is the data distribution.
-For any reward function $R$, we can estimate the latent vector of reward by $z_R =\mathbb{E}_\rho[R(s)B(s)]$, using small amount of samples of given data.
+
+For any reward function $R$, 
+we can estimate the latent vector of reward by $z_R =\mathbb{E}_\rho[R(s)B(s)]$, using small amount of samples of given data.
 
 Theoretically, the optimal $Q$-function and optimal policy of the reward parameterized by $z_R$ can be derived by 
 
-$$\begin{equation}
+$$
+\begin{equation}
     \begin{split}
         Q_R^* &= F(s,a,z_R)^Tz_R, \\
         \pi_{R}^*(s)&=\arg\max_a  F(s,a,z_R)^Tz_R.
     \end{split}
-\end{equation}$$
+\end{equation}
+$$
 
 Training the forward, backward parametric functions are done by TD learning using the following loss,
 
-$$\begin{equation}
+$$
+\begin{equation}
 \begin{split}
 L_{\text{FB}} & = \mathbb{E}_{\rho, z}\left[ \left( F(s_t, a_t, z)^\top B(s') - \gamma \, \bar{F}(s_{t+1}, \pi_z(s_{t+1}), z)^\top \bar{B}(s') \right)^2 \right] \\
 &- 2 \mathbb{E}_{\rho, z}\left[ F(s_t, a_t, z)^\top B(s_{t+1}) \right],
 \end{split}
-\end{equation}$$
+\end{equation}
+$$
 
 where the $\bar{F}, \bar{B}$ is the target network, and $\pi_z$ is the $z$-parameterized deterministic actor that is jointly trained just like DDPG.
 
 Also, introducing an additional conservative learning term into this framework enhances the offline RL performance.
 
-$$\begin{equation}
+$$
+\begin{equation}
 \begin{split}
     L_{\text{MC}} = 
 &\mathbb{E}_{\substack{s,s'\sim\rho\\ a \sim \mu(\cdot|s)}}
@@ -68,13 +80,16 @@ $$\begin{equation}
 	-&\mathbb{E}_{\substack{(s,a),s'\sim\rho}}
 \left[ F(s, a, z)^\top B(s') \right] - H(\mu),
 \end{split}
-\end{equation}$$
+\end{equation}
+$$
 
-where $\mu$ is the distribution of policy at each state, and $H(\mu)$ is approximated by log-sum exponential of $Q_z$.
+where $\mu$ is the distribution of policy at each state, 
+and $H(\mu)$ is approximated by log-sum exponential of $Q_z$.
 
-**Reference**
 
 ---
+**Reference**
+
 [1] A. Touati, J. Rapin, and Y. Ollivier, “Does zero-shot reinforcement learning exist?,” arXiv preprint arXiv:2209.14935, 2022.
 [2] P. Dayan, “Improving generalization for temporal difference learning: The successor representation,” Neural computation, vol. 5, no. 4,
 pp. 613–624, 1993.
