@@ -46,7 +46,7 @@ M^\pi_z(s_0, a_0, s')=F(s_0,a_0,z)^TB(s')\rho(ds'),\\
 \end{equation}
 $$
 
-where $\rho$ is the data distribution.
+where $\rho$ is the data distribution, in offline setting.
 
 For any reward function $R$, 
 we can estimate the latent vector of reward by $z_R =\mathbb{E}_\rho[R(s)B(s)]$, using small amount of samples of given data.
