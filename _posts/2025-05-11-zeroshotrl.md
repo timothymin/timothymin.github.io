@@ -90,8 +90,11 @@ and $H(\mu)$ is approximated by log-sum exponential of $Q_z$.
 ---
 **Reference**
 
-[1] A. Touati, J. Rapin, and Y. Ollivier, “Does zero-shot reinforcement learning exist?,” arXiv preprint arXiv:2209.14935, 2022.
-[2] P. Dayan, “Improving generalization for temporal difference learning: The successor representation,” Neural computation, vol. 5, no. 4,
+A. Touati, J. Rapin, and Y. Ollivier, “Does zero-shot reinforcement learning exist?,” arXiv preprint arXiv:2209.14935, 2022.
+
+P. Dayan, “Improving generalization for temporal difference learning: The successor representation,” Neural computation, vol. 5, no. 4,
 pp. 613–624, 1993.
-[3] A. Barreto, W. Dabney, R. Munos, J. J. Hunt, T. Schaul, H. P . van Hasselt, and D. Silver, “Successor features for transfer in reinforcement learning,” Advances in neural information processing systems, vol. 30, 2017.
-[4] A. Touati and Y. Ollivier, “Learning one representation to optimize all rewards,” Advances in Neural Information Processing Systems, vol. 34, pp. 13–23, 2021.
+
+A. Barreto, W. Dabney, R. Munos, J. J. Hunt, T. Schaul, H. P . van Hasselt, and D. Silver, “Successor features for transfer in reinforcement learning,” Advances in neural information processing systems, vol. 30, 2017.
+
+A. Touati and Y. Ollivier, “Learning one representation to optimize all rewards,” Advances in Neural Information Processing Systems, vol. 34, pp. 13–23, 2021.
