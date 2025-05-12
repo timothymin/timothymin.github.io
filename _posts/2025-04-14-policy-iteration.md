@@ -58,7 +58,7 @@ $$
 
 $V^{\pi_{k}}$ is the fixed point of the Bellman operator, so $V^{\pi_{k+1}}\ge V^{\pi_{k}}$.
 
-Policy Iteration provides conceptual background of Actor-Critic methods of Deep RL.
+Policy Iteration provides a background of Actor-Critic methods of Deep RL.
 
 
 
