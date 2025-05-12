@@ -25,8 +25,9 @@ This is a computationally expensive process.
 
 **2. TD Learning (Bootstrap)**
 
-Another method is called TD Learning, which uses sample of 1-step **transition**. 
-We train a value function to minimize the gap, $L=\mathbb{E}\left[ \frac{1}{2}(V_{\phi}(s)-V^\pi(s))^2 \right]$.
+Another method is called TD Learning, which uses sample of 1-step **transition**.
+
+Beyond traditional tabular methods, we can train a parameterized value function with TD learning. We minimize the gap, $L=\mathbb{E}\left[ \frac{1}{2}(V_{\phi}(s)-V^\pi(s))^2 \right]$.
 Using the 1-step property of value function, we approximate $V^\pi(s)\approx r_{0}+\gamma V_{\phi}(s_{1})$.
 The approximate stochastic gradient from the 1-step Bellman gap becomes
 
