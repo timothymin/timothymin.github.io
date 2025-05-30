@@ -7,7 +7,6 @@ permalink: /RL/zeroshotrl/
 author: "Joonkyu Min"
 ---
 
-
 To develop a truly generalized reinforcement learning agent, it must be capable of generating useful policies for arbitrary rewards without training specified agent for each tasks.
 Zero-shot reinforcement learning problem address this challenge by training agents without access to explicit reward signals, and producing sub-optimal policies on new rewards at test time.
 
