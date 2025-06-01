@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  "KL-regularized FB representation for offline zero-shot RL"
-date: 2025-05-30
+title:  "Can Zero-shot RL enable test time safety?"
+date: 2025-06-01
 image: /images/kl-fb-poster.png
 categories: project
 author: "Joonkyu Min"
