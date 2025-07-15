@@ -48,13 +48,6 @@
                 I am currently working as an intern at <a href="https://clvrai.com">CLVR Lab</a> under supervision of <a href="https://clvrai.com/web_lim/">Joseph J. Lim</a>.
               </p>
               <p>
-                My goal is to build AI agent that can interact safe and reliable with the real world.
-              </p>
-              <p>
-                I believe that building and utilizing general knowledge is the key to real world safety.
-                In this sense, I am particularly interested in Safety Alignment of Robot Foundation Models, Unsupervised Reinforcement Learning including unsupervised skill discovery and zero-shot RL.
-              </p>
-              <p>
                 Previously, I worked as an intern at professor <a href="https://jaesik.info">Jaesik Park</a>'s Lab, 
                 where I worked on 3D computer vision, especially 3D gaussian splatting.
               </p>
@@ -74,11 +67,14 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <!-- <h2>Research</h2> -->
-              <!-- <p>
-                My goal is to build AI agent that can truly understand and interact safely with the real world. 
-                I believe that this would be possible to build a generalized agent via reinforcement learning. 
-              </p> -->
+              <h2>Research</h2>
+              <p>
+                My goal is to build AI agent that can interact safe and reliable with the real world.
+              </p>
+              <p>
+                I believe that building and utilizing general knowledge is the key to real world safety.
+                In this sense, I am also interested in safety alignment of Robot Foundation Models, Unsupervised Reinforcement Learning including unsupervised skill discovery and zero-shot RL.
+              </p>
             </td>
           </tr>
         </table>
@@ -188,6 +184,9 @@
               {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
               {% endif %}
+              {% if post.blogpost %}
+              <a href="{{post.blogpost}}">blog post</a> /
+              {% endif %}
               <p></p>
               {{ post.excerpt }}
             </td>
@@ -197,12 +196,12 @@
           {% endfor %}
         </table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Posts</h2>
               {% assign sortedposts = site.posts | sort: 'date' %}
-              <!-- <h4>Reinforcement Learning</h4>
+              <h4>Reinforcement Learning</h4>
               <ul>
                 {% for post in sortedposts %}
                 {% for cat in post.categories %}
@@ -211,9 +210,9 @@
                 {% endif %}
                 {% endfor %}
                 {% endfor %}
-              </ul> -->
+              </ul>
 
-              <!-- <h4>Information Theory</h4>
+              <h4>Information Theory</h4>
               <ul>
                 {% for post in sortedposts %}
                 {% for cat in post.categories %}
@@ -222,10 +221,10 @@
                 {% endif %}
                 {% endfor %}
                 {% endfor %}
-              </ul> -->
+              </ul>
             </td>
           </tr>
-        </table>
+        </table> -->
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>

@@ -7,7 +7,9 @@ categories: project
 author: "Joonkyu Min"
 subtitle: "Exploring the potential of zero-shot RL to enable safe decision-making at deployment"
 # code: https://github.com/timothymin/KL_FB_representation
+blogpost: /RL/zeroshotrl/
 course: "Robot Learning"
 ---
 
-Course Project of Robot Learning at SNU (ongoing).
+Course Project of Robot Learning at SNU.
+Exploring the potential of zero-shot RL method to enable safe decision-making at test time.
