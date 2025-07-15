@@ -6,8 +6,7 @@ date: 2025-06-01
 categories: project
 author: "Joonkyu Min"
 subtitle: "Exploring the potential of zero-shot RL to enable safe decision-making at deployment"
-# code: https://github.com/timothymin/KL_FB_representation
-blogpost: /RL/zeroshotrl/
+blogpost: /post/zeroshotrlenablesafety/
 course: "Robot Learning"
 ---
 
