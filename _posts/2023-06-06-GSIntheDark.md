@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Gaussian Splatting in the dark"
-date:   2023-06-06
+date:   2023-06-06 +00:00
 image: /images/GS_in_the_dark.png
 categories: project
 author: "Joonkyu Min"
