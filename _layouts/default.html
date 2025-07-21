@@ -67,22 +67,30 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Research</h2>
+              <h2>Research Goal</h2>
               <p>
-                My goal is to build AI agent that can interact safe and reliable with the real world.
+                My goal is to build safe and reliable AI agent that can interact with the real world.
               </p>
               <p>
-                I believe that building and utilizing general knowledge is the key to real world safety.
-                In this sense, I am also interested in safety alignment of Robot Foundation Models, Unsupervised Reinforcement Learning including unsupervised skill discovery and zero-shot RL.
+                I believe that safety is the key component for practical tasks of robots.
+                Safety gaurantees would also enable easier and scalable real world data collection and training, enabling more robust deployment!
               </p>
             </td>
           </tr>
         </table>
+        
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Publications</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat == 'research' %}
+          {% if cat == 'publications' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
