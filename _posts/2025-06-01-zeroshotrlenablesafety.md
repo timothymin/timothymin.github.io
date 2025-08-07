@@ -1,5 +1,5 @@
 ---
-layout: poster
+layout: post
 title: "Can Zero-shot RL enable test time safety?"
 date: 2025-06-01 +00:00
 permalink: /post/zeroshotrlenablesafety/
