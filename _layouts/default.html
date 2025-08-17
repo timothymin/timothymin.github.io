@@ -39,6 +39,14 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   
+  <style>
+    /* Ensure consistent vertical alignment for all table cells */
+    table td { vertical-align: middle; }
+    /* Remove baseline gaps under images that can affect alignment */
+    img { display: block; }
+    /* Avoid extra spacing around figure that can shift visual alignment */
+    figure { margin: 0; }
+  </style>
 </head>
 
 <body>
@@ -66,7 +74,7 @@
                 <a href="{{ site.baseurl }}/pdfs/JoonkyuMin_CV.pdf" target="_blank">CV</a>
               </p>
             </td>
-            <td style="padding:2.5%;width:25%;max-width:25%">
+            <td style="padding:2.5%;width:25%;max-width:25%;vertical-align:middle">
               <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile_pic.jpg">
             </td>
           </tr>
@@ -90,7 +98,7 @@
                 Automating repetitive and labor-intensive lab tasks by robots will accelerate scientific discovery in many fields like bio technology and life science!
               </p>
             </td>
-            <td style="padding:2.5%;width:25%;max-width:25%">
+            <td style="padding:2.5%;width:25%;max-width:25%;vertical-align:middle">
               <figure style="width:100%;max-width:100%;text-align:center;">
                 <img style="width:100%;max-width:100%" alt="lab_automation" src="images/lab_automation.png">
                 <figcaption style="font-size:0.7em;color:#666;margin-top:3px;">Lab automation (by GPT5)</figcaption>
