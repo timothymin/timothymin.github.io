@@ -12,13 +12,13 @@ Zero-shot RL shows potential for producing general-purpose, reusable agents that
 
 This raises an important question: if the zero-shot RL problem is to adapt to any reward, can it also adapt to any safety constraint?
 
-We propose **FB-safe**, a zero-shot safety method that extends the Forward-Backward (FB) representations introduced by Touati et al. (2021) to incorporate safety. Our approach enables agents to adapt to safety constraints at test time by leveraging generalized Q-functions that span both reward and cost signals. This eliminates the need for further exploration or fine-tuning and allows for safe, efficient deployment in offline safe RL scenarios. We evaluate FB-safe against prior state-of-the-art methods and show that it balances task performance and safety competitively. The results indicate that the zero-shot RL problem can be extended to a zero-shot safety problem, offering a novel perspective on how to approach safety in RL without task-specific training.
+I propose **FB-safe**, a zero-shot safety method that extends the Forward-Backward (FB) representations introduced by Touati et al. (2021) to incorporate safety. My approach enables agents to adapt to safety constraints at test time by leveraging generalized Q-functions that span both reward and cost signals. This eliminates the need for further exploration or fine-tuning and allows for safe, efficient deployment in offline safe RL scenarios. I evaluate FB-safe against prior state-of-the-art methods and show that it balances task performance and safety competitively. The results indicate that the zero-shot RL problem can be extended to a zero-shot safety problem, offering a novel perspective on how to approach safety in RL without task-specific training.
 
 ## Constrained Markov Decision Process (CMDP)
 
-To incorporate safety into zero-shot RL, we consider a Constrained Markov Decision Process (CMDP). During training, a reward-free MDP defined by the tuple $(S, A, P, \gamma)$ is given, where $S$ is the state space, $A$ is the action space, $P: S \times A \times S \rightarrow \mathbb{R}$ is the transition probability, and $\gamma \in [0, 1)$ is the discount factor.
+To incorporate safety into zero-shot RL, I consider a Constrained Markov Decision Process (CMDP). During training, a reward-free MDP defined by the tuple $(S, A, P, \gamma)$ is given, where $S$ is the state space, $A$ is the action space, $P: S \times A \times S \rightarrow \mathbb{R}$ is the transition probability, and $\gamma \in [0, 1)$ is the discount factor.
 
-At test time, we are given a reward function $R: S \rightarrow \mathbb{R}$ and a cost function $C: S \rightarrow \mathbb{R}_{\ge 0}$ that penalizes unsafe behavior, forming a CMDP $(S, A, P, R, C, \gamma)$. The main goal for the policy in a CMDP is to maximize expected return while ensuring that the expected cumulative cost satisfies an upper bound $\epsilon$:
+At test time, I am given a reward function $R: S \rightarrow \mathbb{R}$ and a cost function $C: S \rightarrow \mathbb{R}_{\ge 0}$ that penalizes unsafe behavior, forming a CMDP $(S, A, P, R, C, \gamma)$. The main goal for the policy in a CMDP is to maximize expected return while ensuring that the expected cumulative cost satisfies an upper bound $\epsilon$:
 
 $$
 \pi^*_{R,C} = \arg\max_\pi \mathbb{E}^\pi\left[\sum_{t=0}^{\infty} R(s_t)\right] \quad \text{s.t.} \quad \mathbb{E}^\pi\left[\sum_{t=0}^{\infty} C(s_t, a_t)\right] \le \epsilon.
@@ -26,7 +26,7 @@ $$
 
 ## FB representation
 
-For the training phase, we build on the FB framework. The successor measure is defined as
+For the training phase, I build on the FB framework. The successor measure is defined as
 
 $$
 \begin{aligned}
@@ -42,7 +42,7 @@ M^\pi_z(s_0, a_0, s') = F(s_0, a_0, z)^\top B(s')\rho(ds'),
 \end{aligned}
 $$
 
-where $\rho$ is the data distribution. For any reward function $R$, we estimate the latent reward vector using a small number of samples:
+where $\rho$ is the data distribution. For any reward function $R$, I estimate the latent reward vector using a small number of samples:
 
 $$
 z_R = \mathbb{E}_\rho[R(s) B(s)].
@@ -87,13 +87,13 @@ $$
 \max_\pi \mathbb{E}^{\pi} \left[ \sum_{t=0}^{\infty} \gamma^t R(s_t) - \lambda \max\left(\sum_{t=0}^{\infty} \gamma^t C(s_t) - \epsilon, 0\right) \right].
 $$
 
-For tractability, we instead optimize
+For tractability, I instead optimize
 
 $$
 \mathbb{E}^{\pi} \left[ \sum_{t=0}^{\infty} \gamma^t (R(s_t) - \lambda C(s_t)) \right]
 $$
 
-whenever the expected cost exceeds the threshold, and use the original reward otherwise. Let $Q_{R}^\pi$ denote the standard Q-function and $Q_{C}^\pi$ the Q-function for the cost. The FB-safe objective becomes
+whenever the expected cost exceeds the threshold, and I use the original reward otherwise. Let $Q_{R}^\pi$ denote the standard Q-function and $Q_{C}^\pi$ the Q-function for the cost. The FB-safe objective becomes
 
 $$
 \max_\pi
@@ -131,9 +131,9 @@ z_{R - \lambda C} &= \mathbb{E}_\rho[(R(s) - \lambda C(s)) B(s)].
 \end{aligned}
 $$
 
-Using the pretrained FB framework, we compute $\pi_{R - \lambda C}^*$, 
+Using the pretrained FB framework, I compute $\pi_{R - \lambda C}^*$, 
 $\pi_R^*$, and $Q_C^*$, and select the appropriate policy. 
-The policy $\pi_{R - \lambda C}^*$ acts as a recovery controller that steers the agent back to the safe region. In practice we set
+The policy $\pi_{R - \lambda C}^*$ acts as a recovery controller that steers the agent back to the safe region. In practice I set
 
 $$
 \lambda = \frac{\mathbb{E}_\rho[R(s)]}{\mathbb{E}_\rho[C(s)]}
@@ -141,14 +141,14 @@ $$
 
 to balance reward maximization and cost minimization.
 
-![Diagram of FB-safe](/images/Can%20Zero-shot%20RL%20ensure%20safety.png)
-<small>[Download the high-resolution PDF](/images/Can%20Zero-shot%20RL%20ensure%20safety.pdf)</small>
+<img src="/images/Can%20Zero-shot%20RL%20ensure%20safety.png" alt="Diagram of FB-safe" width="600">
+<!-- <small>[Download the high-resolution PDF](/images/Can%20Zero-shot%20RL%20ensure%20safety.pdf)</small> -->
 
 ## Experiments
 
-We evaluate FB-safe on the DSRL benchmark (Liu et al., 2024), specifically the BulletSafetyGym environments (Gronauer and Diehl, 2022). We compare against recent offline safe RL baselines: BC-safe, CPQ (Xu et al., 2022), COptiDICE (Lee et al., 2022), and CDT (Liu et al., 2023). These methods are trained with access to reward and cost, while FB-safe is trained in a zero-shot fashion without either signal.
+I evaluate FB-safe on the DSRL benchmark (Liu et al., 2024), specifically the BulletSafetyGym environments (Gronauer and Diehl, 2022). I compare against recent offline safe RL baselines: BC-safe, CPQ (Xu et al., 2022), COptiDICE (Lee et al., 2022), and CDT (Liu et al., 2023). These methods are trained with access to reward and cost, while FB-safe is trained in a zero-shot fashion without either signal.
 
-The normalized reward and cost follow the DSRL conventions. Cost values below one are considered safe. Each method is run with three seeds for 20 episodes at cost thresholds $\epsilon \in \{10, 20, 40\}$ and we report the average across all experiments.
+The normalized reward and cost follow the DSRL conventions. Cost values below one are considered safe. Each method is run with three seeds for 20 episodes at cost thresholds $\epsilon \in \{10, 20, 40\}$ and I report the average across all experiments.
 
 | Task | BC-safe reward | BC-safe cost | CDT reward | CDT cost | COptiDICE reward | COptiDICE cost | CPQ reward | CPQ cost | FB reward | FB cost | FB-safe reward | FB-safe cost |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -159,7 +159,7 @@ The normalized reward and cost follow the DSRL conventions. Cost values below on
 
 FB-safe achieves a competitive trade-off between reward maximization and cost minimization across multiple tasks. Compared to the vanilla FB policy, FB-safe significantly reduces cost, demonstrating that the safety-aware selection layer is effective even in the zero-shot setting.
 
-We further study the effect of the hyperparameter $\lambda$, which governs the trade-off between reward and safety. A small $\lambda$ fails to prevent risky behavior, while a larger $\lambda$ reduces cost at the expense of reward. Balancing this trade-off remains an important direction for future work.
+I further study the effect of the hyperparameter $\lambda$, which governs the trade-off between reward and safety. A small $\lambda$ fails to prevent risky behavior, while a larger $\lambda$ reduces cost at the expense of reward. Balancing this trade-off remains an important direction for future work.
 
 | $\lambda$ | Reward | Cost |
 | --- | --- | --- |
@@ -170,10 +170,10 @@ We further study the effect of the hyperparameter $\lambda$, which governs the t
 
 ## Conclusion
 
-We introduced FB-safe, a zero-shot safe RL framework that extends FB representations with a safety-aware policy selection mechanism. FB-safe balances reward and cost in offline safe RL environments without relying on reward or cost signals during training. Experiments on the DSRL benchmark show that FB-safe matches or outperforms existing offline safe RL baselines in cost reduction, despite operating in a more challenging zero-shot setting.
+I introduced FB-safe, a zero-shot safe RL framework that extends FB representations with a safety-aware policy selection mechanism. FB-safe balances reward and cost in offline safe RL environments without relying on reward or cost signals during training. Experiments on the DSRL benchmark show that FB-safe matches or outperforms existing offline safe RL baselines in cost reduction, despite operating in a more challenging zero-shot setting.
 
 This approach can be applied when cost functions are defined dynamically, making it suitable for domains where explicit safety signals are hard to obtain. Future work will extend FB-safe to pixel-based state representations and natural-language safety constraints, enabling richer generalization and explainability in real-world deployment scenarios.
 
-A current limitation is that performance is sensitive to the choice of $\lambda$, which we treat as a fixed hyperparameter. Developing adaptive strategies for tuning $\lambda$ is a promising direction for improving the balance between performance and safety.
+A current limitation is that performance is sensitive to the choice of $\lambda$, which I treat as a fixed hyperparameter. Developing adaptive strategies for tuning $\lambda$ is a promising direction for improving the balance between performance and safety.
 
 By addressing these avenues, FB-safe can provide a robust foundation for safe, generalizable, and interpretable reinforcement learning systems, especially for robotics and autonomous navigation in environments with dynamic and complex safety requirements.
