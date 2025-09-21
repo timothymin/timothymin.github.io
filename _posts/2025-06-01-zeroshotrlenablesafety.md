@@ -132,9 +132,7 @@ z_{R - \lambda C} &= \mathbb{E}_\rho[(R(s) - \lambda C(s)) B(s)].
 $$
 
 Using the pretrained FB framework, I compute $\pi_{R - \lambda C}^*$, 
-$\pi_R^*$, and 
-$Q_C^*$, and select the appropriate policy. 
-
+$\pi_R^*$, and $Q_C^*$, and select the appropriate policy. 
 The policy $\pi_{R - \lambda C}^*$ acts as a recovery controller that steers the agent back to the safe region. In practice I set
 
 $$
@@ -143,7 +141,7 @@ $$
 
 to balance reward maximization and cost minimization.
 
-<img src="/images/Can%20Zero-shot%20RL%20ensure%20safety.png" alt="Diagram of FB-safe" width="600">
+![Diagram of FB-safe](/images/Can%20Zero-shot%20RL%20ensure%20safety.png)
 <!-- <small>[Download the high-resolution PDF](/images/Can%20Zero-shot%20RL%20ensure%20safety.pdf)</small> -->
 
 ## Experiments
