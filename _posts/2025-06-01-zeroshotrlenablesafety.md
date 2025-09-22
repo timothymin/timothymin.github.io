@@ -154,23 +154,31 @@ I evaluate FB-safe on the DSRL benchmark (Liu et al., 2024), specifically the Bu
 
 The normalized reward and cost follow the DSRL conventions. Cost values below one are considered safe. Each method is run with three seeds for 20 episodes at cost thresholds $\epsilon \in \{10, 20, 40\}$ and I report the average across all experiments.
 
-| Task | BC-safe reward | BC-safe cost | CDT reward | CDT cost | COptiDICE reward | COptiDICE cost | CPQ reward | CPQ cost | FB reward | FB cost | FB-safe reward | FB-safe cost |
+<img src="/images/zsrlsafe1.png"
+     alt="Normalized Reward and Cost comparison"
+     style="max-width:800px;width:100%;margin:0 auto;display:block;" />
+
+<!-- | Task | BC-safe reward | BC-safe cost | CDT reward | CDT cost | COptiDICE reward | COptiDICE cost | CPQ reward | CPQ cost | FB reward | FB cost | FB-safe reward | FB-safe cost |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CarCircle | 0.50 | **0.84** | 0.75 | **0.95** | 0.49 | 3.14 | 0.71 | **0.33** | 0.87 | 5.27 | 0.45 | **0.27** |
 | DroneCircle | 0.56 | **0.57** | 0.63 | **0.98** | 0.26 | 1.02 | -0.20 | 1.28 | 0.57 | **0.99** | 0.26 | **0.18** |
 | DroneRun | 0.28 | **0.74** | 0.63 | **0.79** | 0.67 | 4.15 | 0.33 | 3.52 | 1.00 | 8.17 | 0.58 | 3.16 |
-| AntRun | 0.65 | 1.09 | 0.72 | **0.91** | 0.61 | **0.94** | 0.03 | **0.02** | 0.68 | 4.74 | 0.44 | **1.00** |
+| AntRun | 0.65 | 1.09 | 0.72 | **0.91** | 0.61 | **0.94** | 0.03 | **0.02** | 0.68 | 4.74 | 0.44 | **1.00** | -->
 
 FB-safe achieves a competitive trade-off between reward maximization and cost minimization across multiple tasks. Compared to the vanilla FB policy, FB-safe significantly reduces cost, demonstrating that the safety-aware selection layer is effective even in the zero-shot setting.
 
 I further study the effect of the hyperparameter $\lambda$, which governs the trade-off between reward and safety. A small $\lambda$ fails to prevent risky behavior, while a larger $\lambda$ reduces cost at the expense of reward. Balancing this trade-off remains an important direction for future work.
 
-| $\lambda$ | Reward | Cost |
+<img src="/images/zsrlsafe2.png"
+     alt="ormalized Reward and Cost comparison across lambda"
+     style="max-width:400px;width:100%;margin:0 auto;display:block;" />
+
+<!-- | $\lambda$ | Reward | Cost |
 | --- | --- | --- |
 | 1 | 0.74 | 4.17 |
 | 2 | 0.69 | 3.07 |
 | 4 | 0.58 | **0.84** |
-| 8 | 0.42 | **0.24** |
+| 8 | 0.42 | **0.24** | -->
 
 ## Conclusion
 
