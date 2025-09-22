@@ -131,9 +131,9 @@ z_{R - \lambda C} &= \mathbb{E}_\rho[(R(s) - \lambda C(s)) B(s)].
 \end{aligned}
 $$
 
-Using the pretrained FB framework, I compute $\pi^*_{R - \lambda C}$, 
+Using the pretrained FB framework, I compute $\pi^*_{R-\lambda C}$, 
 $\pi^*_R$, and $Q^*_C$, and select the appropriate policy. 
-The policy $\pi^*_{R - \lambda C}$ acts as a recovery controller that steers the agent back to the safe region. In practice I set
+The policy $\pi^*_{R-\lambda C}$ acts as a recovery controller that steers the agent back to the safe region. In practice I set
 
 $$
 \lambda = \frac{\mathbb{E}_\rho[R(s)]}{\mathbb{E}_\rho[C(s)]}
